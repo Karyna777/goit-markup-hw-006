@@ -46,7 +46,7 @@ img {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--main-color);
 }
 button {
@@ -83,7 +83,7 @@ a {
 }
 
 .head-logo {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 800;
   font-size: 18px;
   line-height: calc(24 / 18);
@@ -136,6 +136,10 @@ a {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/logo-hero-min.jpg);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  background-position: center;
+  max-width: 1440px;
 }
 .ben-svg-box {
   width: 264px;
@@ -157,7 +161,7 @@ a {
 }
 .hero-but {
   margin: 0 auto;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -240,7 +244,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.social-icon-item {
+.social-link {
   background-color: var(--normal-color-button);
   width: 40px;
   height: 40px;
@@ -249,8 +253,8 @@ a {
   justify-content: center;
   align-items: center;
 }
-.social-icon-item:hover,
-.social-icon-item:focus {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--contact-color-hover);
   transition: all 250ms ease;
 }
@@ -315,7 +319,7 @@ a {
 .footer-logo {
   display: block;
   margin-bottom: 16px;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 800;
   font-size: 18px;
   line-height: calc(21 / 18);
@@ -364,7 +368,7 @@ a {
   margin-bottom: 8px;
 }
 .filter-but {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -388,16 +392,23 @@ a {
 .filter-but:focus {
   color: var(--white-color);
   background-color: var(--contact-color-hover);
+  border: 1px solid var(--contact-color-hover);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-
   column-gap: 24px;
   row-gap: 48px;
 }
 .gallery-item {
   outline: 1px solid #e7e9fc;
+}
+.gallery-link :hover,
+.gallery-link :focus {
+  box-shadow: 1px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .customers {
   padding-top: 130px;
@@ -419,7 +430,7 @@ a {
   align-items: center;
   gap: 24px;
 }
-.customers-item {
+.link-cust-svg {
   border: 1px solid var(--svg-client);
   border-radius: 4px;
   width: 168px;
@@ -427,19 +438,18 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--svg-client);
 }
-.customers-item:hover,
-.customers-item:focus {
+.link-cust-svg:hover,
+.link-cust-svg:focus {
   border: 1px solid var(--contact-color-hover);
-  fill: var(--contact-color-hover);
+
+  color: var(--contact-color-hover);
 }
 .custom-svg {
-  fill: var(--svg-client);
+  fill: currentColor;
 }
-.custom-svg:hover,
-.costom-svg:focus {
-  fill: var(--contact-color-hover);
-}
+
 .gallery-title {
   font-weight: 500;
   font-size: 20px;
@@ -465,9 +475,14 @@ a {
   color: var(--background-button);
   margin-bottom: 16px;
 }
-.footer-socials-item {
-  background-color: rgba(255, 255, 255, 0.1);
 
+.footer-socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-socials-link {
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -475,8 +490,8 @@ a {
   justify-content: center;
   align-items: center;
 }
-.footer-socials-item:hover,
-.footer-socials-item:focus {
+.footer-socials-link:hover,
+.footer-socials-link:focus {
   background-color: var(--green);
 }
 .container-footer-icons {
