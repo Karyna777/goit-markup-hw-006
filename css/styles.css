@@ -113,6 +113,7 @@ a {
 }
 .nav-link:hover,
 .nav-link:focus {
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--contact-color-hover);
 }
 .con-link {
@@ -123,6 +124,7 @@ a {
 }
 .con-link:hover,
 .con-link:focus {
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--contact-color-hover);
 }
 
@@ -184,6 +186,7 @@ a {
 }
 .hero-but:hover,
 .hero-but:focus {
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--contact-color-hover);
 }
 
@@ -258,7 +261,7 @@ a {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--contact-color-hover);
-  transition: all 250ms ease;
+  transition: all 250ms ease, color: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-svg {
@@ -393,6 +396,7 @@ a {
 
 .filter-but:hover,
 .filter-but:focus {
+  transition: all 250ms ease, color: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--white-color);
   background-color: var(--contact-color-hover);
   border: 1px solid var(--contact-color-hover);
@@ -411,6 +415,7 @@ a {
 
 .gallery-link:hover,
 .gallery-link:focus {
+  
   box-shadow: 1px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -447,7 +452,6 @@ a {
 .link-cust-svg:hover,
 .link-cust-svg:focus {
   border: 1px solid var(--contact-color-hover);
-
   color: var(--contact-color-hover);
 }
 .custom-svg {
