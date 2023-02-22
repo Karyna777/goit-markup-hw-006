@@ -11,6 +11,7 @@
   --svg-client: #8e8f99;
   --iris-logo: #4d5ae5;
   --green: #31d0aa;
+  --input-text: #757575 50%;
 }
 * {
   box-sizing: border-box;
@@ -563,6 +564,7 @@ a {
   background-color: var(--green);
 }
 .container-footer-icons {
+  margin-right: 80px;
   display: flex;
   flex-direction: column;
   margin-top: 0px;
@@ -586,8 +588,8 @@ a {
 
 .modal {
   padding: 24px;
-  width: 450px;
-  height: 609px;
+  width: 408px;
+  height: 584px;
   background-color: #fff;
   border-radius: 2px;
   position: absolute;
@@ -597,6 +599,7 @@ a {
 }
 
 .modal-close-button {
+  margin-bottom: 24px;
   width: 24px;
   height: 24px;
   align-items: center;
@@ -620,4 +623,172 @@ a {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.footer-name-input {
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  color: var(--white-color);
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-form-input {
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+  margin-right: 24px;
+  box-sizing: border-box;
+  width: 264px;
+  height: 40px;
+  background-color: var(--background-footer);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.footer-form-input:hover,
+.footer-form-input:focus {
+  outline: none;
+}
+
+.footer-butt-subs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  background: var(--normal-color-button);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-butt-subs:hover,
+.footer-butt-subs:focus {
+  background-color: var(--contact-color-hover);
+}
+.name-modal {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--background-footer);
+}
+.box-modal-input {
+  /* display: flex;
+  flex-direction: column; */
+  width: 100%;
+}
+.name-label-modal {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  color: var(--svg-client);
+}
+.input-modal {
+  width: 360px;
+  height: 40px;
+  padding-left: 38px;
+  box-sizing: border-box;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.box-name {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.svg-modal-input {
+  position: absolute;
+  left: 19px;
+  top: 14px;
+}
+.input-modal:hover,
+.input-modal:focus {
+  outline: none;
+  border: 1px solid var(--iris-logo);
+}
+.box-name:hover,
+.box-name:focus {
+  fill: var(--iris-logo);
+}
+.textarea-modal {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.04em;
+  color: var(--input-text);
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.textarea-modal:hover,
+.textarea-modal:focus {
+  outline: none;
+  border: 1px solid var(--iris-logo);
+}
+.checkbox-modal {
+  height: 16px;
+  width: 16px;
+  background: #fcfcfc;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+.check-label-modal {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  color: var(--svg-client);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.link-modal {
+  color: var(--iris-logo);
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  text-decoration: underline;
+}
+.butt-modal {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  background: var(--normal-color-button);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+}
+.butt-modal:hover,
+.butt-modal:focus {
+  background-color: var(--contact-color-hover);
 }
