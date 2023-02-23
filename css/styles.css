@@ -587,7 +587,7 @@ a {
 }
 
 .modal {
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   width: 408px;
   height: 584px;
   background-color: #fff;
@@ -599,7 +599,9 @@ a {
 }
 
 .modal-close-button {
-  margin-bottom: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   align-items: center;
@@ -679,6 +681,7 @@ a {
   background-color: var(--contact-color-hover);
 }
 .name-modal {
+  padding-top: 48 px;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -688,8 +691,6 @@ a {
   color: var(--background-footer);
 }
 .box-modal-input {
-  /* display: flex;
-  flex-direction: column; */
   width: 100%;
 }
 .name-label-modal {
@@ -698,6 +699,7 @@ a {
   color: var(--svg-client);
 }
 .input-modal {
+  margin-top: 4px;
   width: 360px;
   height: 40px;
   padding-left: 38px;
@@ -709,6 +711,7 @@ a {
 .box-name {
   position: relative;
   margin-bottom: 8px;
+  height: 40px;
 }
 
 .svg-modal-input {
@@ -726,6 +729,7 @@ a {
   fill: var(--iris-logo);
 }
 .textarea-modal {
+  resize: none;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.04em;
@@ -743,32 +747,7 @@ a {
   outline: none;
   border: 1px solid var(--iris-logo);
 }
-.checkbox-modal {
-  height: 16px;
-  width: 16px;
-  background: #fcfcfc;
-  border-radius: 4px;
-  font-size: 12px;
-  line-height: calc(14 / 12);
-  letter-spacing: 0.04em;
-  color: #757575;
-}
-.check-label-modal {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  font-size: 12px;
-  line-height: calc(14 / 12);
-  color: var(--svg-client);
-  gap: 8px;
-  margin-bottom: 24px;
-}
-.link-modal {
-  color: var(--iris-logo);
-  font-size: 12px;
-  line-height: calc(14 / 12);
-  text-decoration: underline;
-}
+
 .butt-modal {
   display: flex;
   flex-direction: row;
@@ -791,4 +770,67 @@ a {
 .butt-modal:hover,
 .butt-modal:focus {
   background-color: var(--contact-color-hover);
+}
+.modal-form-agreement {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.modal-form-checkbox {
+  position: absolute;
+  appearance: none;
+  display: block;
+  height: 18px;
+
+  border: 2px solid var(--primary-bg-cl);
+  border-radius: 3px;
+  transition: background-color 400ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    border-color 400ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    background-size 400ms cubic-bezier(0.075, 0.82, 0.165, 1) 200ms;
+
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' %3E%3Cpath d='M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z' fill='%23fff' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4px;
+}
+.modal-form-checkbox:checked {
+  background-color: var(--contact-color-hover);
+  border-color: var(--contact-color-hover);
+  background-size: 14px;
+}
+
+.custom-checkbox {
+}
+.custom-checkbox-frame {
+  fill: var(--white-color);
+  stroke: #2e2f42;
+  transition: 400ms;
+}
+.modal-form-checkbox:checked + .custom-checkbox > .custom-checkbox-frame {
+  fill: var(--contact-color-hover);
+  stroke: var(--contact-color-hover);
+}
+.custom-checkbox-check {
+  fill: var(--white-color);
+  opacity: 0;
+  transform: rotate(0) scale(0.3);
+  transition: 400ms 200ms;
+  transform-origin: center;
+}
+.modal-form-checkbox:checked + .custom-checkbox > .custom-checkbox-check {
+  opacity: 1;
+  transform: rotate(360deg) scale(0.7);
+}
+.modal-form-desc {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+.modal-form-link {
+  color: var(--iris-logo);
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  text-decoration: underline;
 }
