@@ -17,21 +17,26 @@
   box-sizing: border-box;
 }
 .container {
-  margin: 0 auto;
-  width: 1158px;
+   /* Phone screen: >= 320px */
+  min-width: 320px;
+  max-width: 448px;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0 auto;
+  width: 1158px;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0px;
-}
+@media screen and (min-width: 768px) {
+  .container {
+    /* Tablet screen: >= 768px */
+    max-width: 720px;
+  }
+
+  @media screen and (min-width: 1200px) {
+  .container {
+    /* Desktop screen: >= 1200px */
+    max-width: 1200px;
+  }
 
 ul {
   margin: 0px;
